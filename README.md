@@ -6,8 +6,9 @@ On one hand, there are a lot of experimental methods for the detection of protei
 The novelty of using DDN, based on the paper is that it can automatically extract high-level meaningful and abstract features of proteins from noisy data instead of hand-picking and crafting discriminant features which in addition to requiring a solid domain knowledge,  might also be prone to errors due to the noise that might be present in the features. 
 Based on the paper, applying the proposed DNN model achieved the following results:
 
-  Accuracy      Precision       Recall        Specificity       Matthews Correlation Coefficient
-  92.5%         94.38%          90.56%        94.49%            85.08%
+| Accuracy | Precision | Recall | Specificity | Matthews Correlation Coefficient |
+|:--------:|:---------:|:------:|:-----------:|:--------------------------------:|
+| 92.5%    | 94.38%    | 90.56% | 94.49%      | 85.08%                           |                  
 
 DeepPPI Predictor performance was evaluated using eight different PPI datasets taken from literature, they are described in details in the paper.
 
