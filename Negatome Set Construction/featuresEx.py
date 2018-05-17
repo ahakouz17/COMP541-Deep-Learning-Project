@@ -5,7 +5,7 @@ import os
 p = []
 pUnip = []
 for i in range(1,6446): #6445):
-    with open("C:\\Users\\Asma\\Downloads\\COMP541\\Negatome\\Negatomeset\\"+str(i)+".fasta") as file:
+    with open("Negatomeset\\"+str(i)+".fasta") as file:
         proteins = file.readlines()
         protA = ""
         protB = ""
@@ -66,19 +66,19 @@ with Browser('chrome') as browser:
             link.click()
             while True:# wait for download
                 time.sleep(0.5)
-                if os.path.isfile("C:\\Users\\Asma\\Downloads\\"+filename):
+                if os.path.isfile(filename):
                     break
-            with open("C:\\Users\\Asma\\Downloads\\"+filename) as file:
+            with open(filename) as file:
                 lines = file.readlines()
                 features = lines[1].split(",")
                 features = features[1:421] + features[691:1435]
                 #print(len(features))
                 all_features.append([pUnip[i]]+ features)
-            os.remove("C:\\Users\\Asma\\Downloads\\"+filename)
+            os.remove(filename)
         except:
             print("An error occured with protein with UniProt: " + p[i])
             #continue
-        if i % 100 == 0 or i == len(p)-1:
-            with open("C:\\Users\\Asma\\Downloads\\features"+str(i)+".csv", "w") as output:
+        if i % 100 == 0 or i == len(p)-1: # save every 100 samples for backup
+            with open("path\to\downloads\\features"+str(i)+".csv", "w") as output:
                 writer = csv.writer(output, lineterminator='\n')
                 writer.writerows(all_features)
