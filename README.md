@@ -14,3 +14,5 @@ DeepPPI Predictor performance was evaluated using eight different PPI datasets t
 
 You can find [here](http://ailab.ahu.edu.cn:8087/DeepPPI/index.html) the original code and data.
 
+For more details about my model's construction and its evalution, please check Report_Replicating_DeepPPI_Model_for_Boosting_Prediction_of_Protein_Protein_Interactions_with_Deep_Neural_Networks.pdf
+
